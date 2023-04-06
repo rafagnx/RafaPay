@@ -1,0 +1,233 @@
+/* ==================== CSS RESET ==================== */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Source Sans Pro', sans-serif;
+}
+
+/* ==================== CSS VARIABLES ==================== */
+
+:root {
+
+    --fs-14: 1.4rem;
+    --fs-18: 1.8rem;
+
+    --text-color-primary: #E5E7EB;
+    --text-color-secondary: #9CA3AF;
+    --text-color-tertiary: #F9FAFB;
+    
+    --color-border: #374151;
+
+    --input-color-focus: #9333EA;
+
+    --bg-color-primary: #111827;
+    --bg-color-secondary: #1F2937;
+
+}
+
+/* ==================== GENERIC ==================== */
+.logo {
+    background-color: rgb(17, 23, 37);
+   }
+
+html {
+    font-size: 62.5%;
+}
+
+body {
+    font-size: 1.6rem;
+    height: 100vh;
+}
+
+input {
+    display: inline-block;
+    height: 4rem;
+    width: 100%;
+    padding-inline-start: .7rem;
+    background-color: var(--bg-color-primary);
+    border: .1rem solid var(--color-border);
+    border-radius: .4rem;
+}
+
+input,
+input::placeholder {
+    color: var(--text-color-secondary);
+}
+
+input:focus-visible {
+    outline: .2rem solid var(--input-color-focus);
+}
+
+label {
+    font-size: var(--fs-14);
+    font-weight: 600;
+    color: var(--text-color-primary);
+}
+
+/* ==================== UTILITY CLASS ==================== */
+
+
+/* ==================== CONTENT ==================== */
+
+#container {
+    background-color: var(--bg-color-secondary);
+    width: 100%;
+    height: 100vh;    
+    padding: 3.2rem 2.4rem;
+    box-shadow: .1rem .4rem 1.6rem rgba(17, 24, 39, 0.4);
+}
+
+#content {
+    max-width: 32rem;
+    padding-top: 4rem;
+    margin: auto;
+}
+
+.content__creditCard {
+    display: flex;
+    justify-content: center;
+}
+
+.content__bgCard {
+    position: relative;
+    border-radius: 1.2rem;
+    border: .2rem solid var(--color-border);
+    box-shadow: .1rem .4rem 1.6rem rgba(17, 24, 39, 0.4);
+    display: flex;
+}
+
+.content__bgCard img {
+    border-radius: 1.2rem;
+    user-select: none;
+}
+
+.content__elementsCard {
+    position: absolute;
+    top: 0;
+    padding: 1.6rem 2.4rem;
+    display: flex;
+    gap: 3.8rem;
+    flex-direction: column;
+    width: 100%;
+    user-select: none;
+}
+
+.content__numbersCard strong {
+    color: var(--text-color-tertiary);
+    letter-spacing: .4rem;
+}
+
+.content__iconTop,
+.content__yourNameHere {
+    display: flex;   
+    justify-content: space-between;
+    align-items: center;
+}
+
+.content__yourNameHere span {
+    color: var(--text-color-tertiary);
+    opacity: .5;
+}
+
+.content__validityCard {
+    display: flex;
+    align-items: center;
+    gap: .8rem;
+}
+
+.content__validityCard > span {
+    letter-spacing: .3rem;
+}
+
+/* ==================== FORM DATA ==================== */
+
+.content__formFields {
+    display: flex;
+    gap: 2.4rem;
+    flex-direction: column;
+    width: 100%;
+    padding-block: 4.8rem;
+}
+
+.content__field3 {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 1.6rem;
+}
+
+.content__numberCVV label {
+    display: flex;
+    gap: .4rem;
+}
+
+/* ==================== DATA SECURITY ==================== */
+
+.content__dataSecurity {
+    display: flex;
+    gap: .8rem;
+    justify-content: center;
+    position: relative;
+    top: -1.3rem;
+}
+
+.content__dataSecurity span {
+    color: var(--text-color-primary);
+    font-size: 1.4rem;
+    font-weight: 400;
+}
+
+/* ==================== BUTTON ==================== */
+
+.content__addCard {
+    margin-top: 3.5rem;
+}
+
+.content__addCard button {
+    width: 100%;
+    height: 5.5rem;
+    border-radius: .4rem;
+    background-color: var(--input-color-focus);
+    border: none;
+    font-size: var(--fs-18);
+    font-weight: 600;
+    color: var(--text-color-tertiary);
+}
+
+/* ==================== DESKTOP ==================== */
+
+@media (min-width: 768px) {
+
+    main.main {
+        display: grid;
+        place-content: center;
+        height: inherit;
+        background-color: var(--bg-color-primary);
+    }
+
+    #container {
+        max-width: 73.2rem;
+        height: fit-content;
+        border-radius: .8rem;
+    }
+
+    #content {
+        display: flex;
+        flex-direction: row-reverse;
+        align-items: center;
+        gap: 6.4rem;
+        max-width: 73.2rem;
+    }
+    
+    .content__dataSecurity {
+        display: flex;
+        align-items: flex-start ;
+    }
+
+    .content__addCard button {
+        cursor: pointer;
+    }
+
+}
