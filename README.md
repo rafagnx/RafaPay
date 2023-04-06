@@ -21,7 +21,7 @@
 <br>
 
 <p align="center">
-  <img alt="rafapay" src=".github/preview.png" width="100%">
+  <img alt="rafapay" src=".github/preview2.png" width="100%">
 </p>
 
 ## 🚀 Tecnologias
